@@ -1,0 +1,486 @@
+/* ==========================================================================
+   1. GLOBAL & RESET STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVBAR STYLES (NEW CHARCOAL / DARK SLATE THEME)
+   ========================================================================== */
+header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #334155;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   3. BUTTON BASE & VARIANTS
+   ========================================================================== */
+.btn {
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    border: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.1);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+/* Navbar Custom Color Buttons */
+.btn-green {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #ffffff !important;
+    border: 1px solid #6ee7b7;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-yellow {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #ffffff !important;
+    border: 1px solid #fef3c7;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.btn-white {
+    background: #ffffff;
+    color: #0f172a !important;
+    border: 1px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+}
+
+.btn-nav {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #ffffff !important;
+    border: 1px solid #fef3c7;
+}
+
+/* Translucent Button Link Variant */
+.btn-link {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+
+.btn-link:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    color: #ffffff !important;
+}
+
+/* Section & Form Action Buttons (New Emerald Green & Slate Styles) */
+.btn-primary {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.4);
+}
+
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    color: #ffffff !important;
+    width: 100%;
+    font-size: 1.05rem;
+    padding: 14px;
+    box-shadow: 0 4px 15px rgba(5, 150, 105, 0.35);
+}
+
+/* Modal Specific Action Buttons */
+.btn-modal-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.05rem;
+    text-decoration: none;
+}
+
+.call-btn {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.3);
+}
+
+.wa-btn {
+    background: linear-gradient(135deg, #25d366 0%, #16a34a 100%);
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.btn-green:hover,
+.btn-yellow:hover,
+.btn-white:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+/* Floating WhatsApp Badge */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: #ffffff;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 55px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* ==========================================================================
+   4. HERO SLIDER SECTION
+   ========================================================================== */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    background-color: #0f172a;
+}
+
+.slide {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.75;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    text-align: center;
+    width: 90%;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.slide-text h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(15, 23, 42, 0.7);
+    color: #ffffff;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+/* ==========================================================================
+   5. COURSES & CARDS SECTION
+   ========================================================================== */
+.courses {
+    padding: 50px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    color: #0f172a;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.course-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+/* ==========================================================================
+   6. CONTACT & FORM SECTION
+   ========================================================================== */
+.contact-section {
+    background: #f1f5f9;
+    padding: 50px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.form-container,
+.location-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #059669;
+}
+
+.form-response {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.map-box {
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   7. MODAL POPUP
+   ========================================================================== */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-card {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #64748b;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   8. FOOTER SECTION
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #090d16;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    border-top: 1px solid #1e293b;
+}
+
+/* ==========================================================================
+   9. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .slider-container {
+        height: 280px;
+    }
+
+    .slide-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn-whatsapp {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Floating Get a Demo Button */
+.demo-float-btn {
+    position: fixed;
+    bottom: 95px;
+    /* Floating WhatsApp ke upar rahega */
+    right: 25px;
+    background: linear-gradient(135deg, #0bd6f5 0%, #085ac5 100%);
+    color: #ffffff !important;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 999;
+    border: 2px solid #fef3c7;
+    transition: all 0.3s ease;
+    animation: pulse-glow 2s infinite;
+}
+
+.demo-float-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgb(40, 180, 35);
+    filter: brightness(1.1);
+}
+
+/* Eye-catching Glow Animation */
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(11, 245, 15, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(26, 193, 29, 0.762);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(46, 245, 11, 0.899);
+    }
+}
+
+/* Mobile Friendly Adjustment */
+@media (max-width: 768px) {
+    .demo-float-btn {
+        bottom: 85px;
+        right: 15px;
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+}

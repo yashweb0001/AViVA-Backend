@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AViVA CLASSES - Excellence in Education</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="navbar container">
+            <h1 class="logo"><a href="index.html" style="color: white; text-decoration: none;"><i
+                        class="fas fa-book-reader"></i> AViVA CLASSES</a></h1>
+            <nav>
+                <ul style="display: flex; gap: 12px; list-style: none; align-items: center; margin: 0; padding: 0;">
+                    <li><a href="index.html" class="btn btn-green">Home</a></li>
+                    <li><a href="batches.html" class="btn btn-yellow">Batches</a></li>
+                    <li><button onclick="openContactModal()" class="btn btn-white">Contact Us</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919415801326?text=Hello!%20I%20want%20to%20know%20more%20about%20coaching%20classes."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- Floating Get a Demo Button -->
+    <a href="#inquiryForm" class="demo-float-btn">
+        <i class="fas fa-chalkboard-teacher"></i> Get a Demo
+    </a>
+
+
+    <!-- Image Slider Hero Section -->
+    <section class="slider-container">
+        <div class="slider">
+            <!-- Image 1 -->
+            <div class="slide active">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeQDr-LjsraQihPIA7rIHMKHimVeTQzZSIpQMigvEcnXrGAlAqOM66o0Vi&s=10"
+                    alt="Classroom">
+                <div class="slide-text">
+                    <h2>Modern Classrooms & Quality Education</h2>
+                    <p>Interactive learning environment for Class 1st to 12th students.</p>
+                    <!-- Batches Button on Slider -->
+                    <div style="margin-top: 15px;">
+                        <a href="batches.html" class="btn btn-primary" style="margin-right: 10px;">Explore Batches &
+                            Subjects</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Image 2 -->
+            <div class="slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvRQIjVNzOTjj8_j0nYs9-z9iLZjyCqnPLT16gkjO8cNpXzJNavl5fKCA&s=10"
+                    alt="Teaching">
+                <div class="slide-text">
+                    <h2>Special Focus on Coding (Python & Java)</h2>
+                    <p>Class 9th to 12th CBSE & ICSE Computer Applications.</p>
+                    <div style="margin-top: 15px;">
+                        <a href="batches.html" class="btn btn-primary">View Course Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses container">
+        <h2 class="section-title">Our Offered Batches</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <i class="fas fa-graduation-cap icon"></i>
+                <h3>Classes 6th - 8th</h3>
+                <p>All Core Subjects (Maths, Science, English). Special focus on building strong foundational concepts.
+                </p>
+            </div>
+            <div class="course-card">
+                <i class="fas fa-atom icon"></i>
+                <h3>Classes 9th & 10th</h3>
+                <p>Mathematics & Science Special Batch. Board exam preparation, daily practice papers, and mock tests.
+                </p>
+            </div>
+            <div class="course-card">
+                <i class="fas fa-pencil-ruler icon"></i>
+                <h3>Doubt Sessions & Tests</h3>
+                <p>Dedicated Sunday doubt-clearing sessions and regular progress reports for parents.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-grid">
+
+            <!-- Admission Form -->
+            <div class="form-container">
+                <h3>Admission Inquiry Form</h3>
+                <form id="inquiryForm">
+                    <div class="form-group">
+                        <label>Student / Parent Name</label>
+                        <!-- Check: id="name" hona chahiye -->
+                        <input type="text" id="name" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <!-- Check: id="phone" hona chahiye -->
+                        <input type="tel" id="phone" required placeholder="Enter 10-digit mobile number">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Select Class</label>
+                        <!-- Check: id="studentClass" hona chahiye -->
+                        <select id="studentClass">
+                            <option value="Class 1st-8th">Class 1st - 8th</option>
+                            <option value="Class 9th-10th">Class 9th & 10th</option>
+                            <option value="Class 11th-12th">Class 11th & 12th</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message (Optional)</label>
+                        <!-- Check: id="message" hona chahiye -->
+                        <textarea id="message" rows="3" placeholder="Any message..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-submit">Submit Inquiry</button>
+                    <p id="formResponse" class="form-response"></p>
+                </form>
+            </div>
+
+            <!-- Location Map & Address -->
+            <div class="location-container">
+                <h3><i class="fas fa-map-marker-alt text-red"></i> Our Location</h3>
+                <p><strong>Address:</strong> Mirzapur Chowk, Near Canara Bank, Sahabganj, Gorakhpur, UP - 273005</p>
+                <p><strong>Phone:</strong> +91 94158 01326</p>
+
+                <!-- Google Map Embed -->
+                <!-- Google Map Embed with Exact Location -->
+                <div class="map-box">
+                    <iframe title="Apex Academy Location"
+                        src="https://maps.google.com/maps?q=26.750723,83.352004&z=17&output=embed" width="100%"
+                        height="220" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
+    </section>
+
+
+    <!-- Contact Us Modal Popup -->
+    <div id="contactModal" class="modal-overlay" onclick="closeContactModal(event)">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeContactModal(event)">&times;</button>
+            <h3 style="font-size: 1.5rem; color: #0f172a; margin-bottom: 8px;">Contact Us</h3>
+            <p style="color: #64748b; margin-bottom: 25px; font-size: 0.95rem;">Get in touch with us directly via Call
+                or WhatsApp</p>
+
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <!-- Call Button -->
+                <a href="tel:+919415801326" class="btn-modal-action call-btn">
+                    <i class="fas fa-phone-alt"></i> Call Us: +91 94158 01326
+                </a>
+
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/919415801326?text=Hello!%20I%20want%20to%20know%20more%20about%20coaching%20classes."
+                    target="_blank" rel="noopener noreferrer" class="btn-modal-action wa-btn">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Faculty / Teachers Section -->
+    <section id="faculty" class="container" style="padding: 50px 20px;">
+        <h2 class="section-title" style="text-transform: uppercase; letter-spacing: 1px;">Our Experienced Faculty</h2>
+
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px;">
+
+            <!-- Faculty 1: Bipin Yadav -->
+            <div class="course-card" style="text-align: center; border-top: 5px solid #1e40af; padding: 30px 20px;">
+                <div
+                    style="width: 80px; height: 80px; background: #dbeafe; color: #1e40af; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 32px;">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <span
+                    style="background: #1e40af; color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase;">HEAD
+                    FACULTY</span>
+                <h3 style="font-size: 1.4rem; color: #0f172a; margin: 10px 0 5px;">Bipin Yadav Sir</h3>
+                <p style="color: #2563eb; font-weight: bold; font-size: 1rem; margin-bottom: 10px;">Maths & Science (
+                    Senior Secondary ) Experience of 10+ Years</p>
+                <p
+                    style="color: #64748b; font-size: 0.9rem; background: #f8fafc; padding: 8px; border-radius: 6px;font-weight: 900;">
+                    Classes 9th to 12th</p>
+            </div>
+
+            <!-- Faculty 2: Yash Jaiswal -->
+            <div class="course-card" style="text-align: center; border-top: 5px solid #059669; padding: 30px 20px;">
+                <div
+                    style="width: 80px; height: 80px; background: #d1fae5; color: #059669; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 32px;">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <span
+                    style="background: #059669; color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase;">FACULTY</span>
+                <h3 style="font-size: 1.4rem; color: #0f172a; margin: 10px 0 5px;">Yash Jaiswal Sir</h3>
+                <p style="color: #059669; font-weight: bold; font-size: 0.95rem; margin-bottom: 8px;">Chemistry (12th) &
+                    Computer Science (9th-12th),( Experience : 3+ years )</p>
+                <p
+                    style="color: #64748b; font-size: 0.85rem; background: #f0fdf4; padding: 8px; border-radius: 6px;font-weight: 900;">
+                    <i class="fab fa-java" style="color: #ee335c;"></i> Java (ICSE) | <i class="fab fa-python"
+                        style="color: #164bbe;font-weight: 900;"></i> Python (CBSE)
+                </p>
+            </div>
+
+            <!-- Faculty 3: Anshika Jaiswal -->
+            <div class="course-card" style="text-align: center; border-top: 5px solid #b40805; padding: 30px 20px;">
+                <div
+                    style="width: 80px; height: 80px; background: #fef3c7; color: #ed7811; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 32px;">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <span
+                    style="background: #d90606; color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase;">FACULTY</span>
+                <h3 style="font-size: 1.4rem; color: #0f172a; margin: 10px 0 5px;">Anshika Jaiswal Mam</h3>
+                <p style="color: #d90606; font-weight: bold; font-size: 1rem; margin-bottom: 10px;">Primary & Senior
+                    Classes</p>
+                <p
+                    style="color: #64748b; font-size: 0.9rem; background: #fffbeb; padding: 8px; border-radius: 6px; font-weight: 900;">
+                    All
+                    Subjects (Class 1st to 8th)</p>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <p>© 2026 AViVA CLASSES. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

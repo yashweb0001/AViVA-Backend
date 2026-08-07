@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specialized Batches - Apex Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919517500126?text=Hello!%20I%20want%20to%20know%20more%20about%20your%20coaching%20batches."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header / Navbar -->
+    <!-- Header / Navbar -->
+    <header>
+        <div class="navbar container">
+            <h1 class="logo"><a href="index.html" style="color: white; text-decoration: none;"><i
+                        class="fas fa-book-reader"></i> Apex Academy</a></h1>
+            <nav>
+                <ul style="display: flex; gap: 12px; list-style: none; align-items: center; margin: 0; padding: 0;">
+                    <li><a href="index.html" class="btn btn-green">Home</a></li>
+                    <li><a href="batches.html" class="btn btn-yellow">Batches</a></li>
+                    <li><button onclick="openContactModal()" class="btn btn-white">Contact Us</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Animated Running Text Ticker -->
+    <div
+        style="background: #e11d48; color: white; overflow: hidden; white-space: nowrap; padding: 10px 0; font-weight: bold; font-size: 1rem; border-bottom: 2px solid #be123c;">
+        <div style="display: inline-block; padding-left: 100%; animation: marquee 18s linear infinite;">
+            ⚡ ADMISSION OPEN: Special Batches for ICSE 10th & 12th Students for Computer Application (Java) & for CBSE
+            12th Students for Computer Science (Python) ⚡
+        </div>
+    </div>
+
+    <style>
+        @keyframes marquee {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(-100%, 0);
+            }
+        }
+
+        .batch-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .batch-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .badge-tag {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .highlight-box {
+            background: #f8fafc;
+            border-left: 4px solid #1e40af;
+            padding: 12px 15px;
+            border-radius: 0 8px 8px 0;
+            margin: 15px 0;
+            font-size: 0.95rem;
+        }
+    </style>
+
+    <!-- Page Banner (Fixed High-Contrast Version) -->
+    <section class="hero" style="background-color: #0f172a; color: #ffffff; padding: 55px 20px;">
+        <div class="container text-center">
+            <h2
+                style="font-size: 2.4rem; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; margin-bottom: 12px; text-transform: uppercase;">
+                Our Specialized Academic Batches
+            </h2>
+            <p
+                style="font-size: 1.15rem; color: #cbd5e1; font-weight: 500; max-width: 750px; margin: 0 auto; line-height: 1.6;">
+                Focused Board Exam Preparation, Practical Coding & Conceptual Clarity for Classes 1st to 12th
+            </p>
+        </div>
+    </section>
+
+    <!-- Batches Cards Grid -->
+    <section class="container" style="padding: 60px 20px;">
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+
+            <!-- Class 1 to 8 Card -->
+            <div class="batch-card" style="border-top: 6px solid #2563eb;">
+                <span class="badge-tag" style="background: #dbeafe; color: #1e40af;">Foundation Program</span>
+                <h3 style="font-size: 1.6rem; color: #0f172a; margin-bottom: 10px; font-weight: 800;"><i
+                        class="fas fa-child text-blue" style="color: #2563eb; margin-right: 8px;"></i> Classes 1st to
+                    8th</h3>
+
+                <div class="highlight-box" style="border-color: #2563eb;">
+                    <strong>Subjects Covered:</strong> All Core Academic Subjects (Maths, Science, English, SST, Hindi)
+                </div>
+
+                <ul style="list-style: none; padding: 0; margin: 20px 0; color: #334155; line-height: 1.8;">
+                    <li><i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i> <strong>Strong
+                            Fundamental Building</strong> & Concept Clarity</li>
+                    <li><i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i> Daily Homework
+                        Support & Study Habits</li>
+                    <li><i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i> Weekly Tests &
+                        Regular Progress Feedback</li>
+                </ul>
+
+                <a href="index.html#contact" class="btn btn-primary"
+                    style="display: block; text-align: center; width: 100%; border-radius: 8px; font-size: 1.05rem; padding: 12px; background: #2563eb;">Enroll
+                    For Class 1st - 8th</a>
+            </div>
+
+            <!-- Class 9 & 10 Card -->
+            <div class="batch-card" style="border-top: 6px solid #059669;">
+                <span class="badge-tag" style="background: #d1fae5; color: #065f46;">Board Special</span>
+                <h3 style="font-size: 1.6rem; color: #0f172a; margin-bottom: 10px; font-weight: 800;"><i
+                        class="fas fa-graduation-cap" style="color: #059669; margin-right: 8px;"></i> Classes 9th & 10th
+                </h3>
+
+                <div class="highlight-box" style="border-color: #059669; background: #f0fdf4;">
+                    <strong>Main Subjects:</strong> Mathematics & Science
+                </div>
+
+                <ul style="list-style: none; padding: 0; margin: 20px 0; color: #334155; line-height: 1.8;">
+                    <li><i class="fas fa-laptop-code" style="color: #2563eb; margin-right: 8px;"></i>
+                        <strong>CBSE:</strong> Computer Application / IT
+                    </li>
+                    <li><i class="fab fa-java" style="color: #e11d48; margin-right: 8px;"></i> <strong>ICSE
+                            Special:</strong> Computer Application (<span
+                            style="color: #e11d48; font-weight: bold;">JAVA Programming</span>)</li>
+                    <li><i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i> Regular Board
+                        Level Mock Tests & Doubt Sessions</li>
+                </ul>
+
+                <a href="index.html#contact" class="btn btn-primary"
+                    style="display: block; text-align: center; width: 100%; border-radius: 8px; font-size: 1.05rem; padding: 12px; background: #059669;">Enroll
+                    For Class 9th / 10th</a>
+            </div>
+
+            <!-- Class 11 & 12 Card -->
+            <div class="batch-card" style="border-top: 6px solid #d97706;">
+                <span class="badge-tag" style="background: #fef3c7; color: #92400e;">Senior Secondary</span>
+                <h3 style="font-size: 1.6rem; color: #0f172a; margin-bottom: 10px; font-weight: 800;"><i
+                        class="fas fa-atom" style="color: #d97706; margin-right: 8px;"></i> Classes 11th & 12th</h3>
+
+                <div class="highlight-box" style="border-color: #d97706; background: #fffbeb;">
+                    <strong>Core Subjects:</strong> Chemistry & Mathematics
+                </div>
+
+                <ul style="list-style: none; padding: 0; margin: 20px 0; color: #334155; line-height: 1.8;">
+                    <li><i class="fab fa-python" style="color: #2563eb; margin-right: 8px;"></i> <strong>CBSE
+                            Stream:</strong> Computer Science (<span
+                            style="color: #2563eb; font-weight: bold;">PYTHON</span>)</li>
+                    <li><i class="fab fa-java" style="color: #e11d48; margin-right: 8px;"></i> <strong>ICSE
+                            Stream:</strong> Computer Science (<span
+                            style="color: #e11d48; font-weight: bold;">JAVA</span>)</li>
+                    <li><i class="fas fa-check-circle" style="color: #10b981; margin-right: 8px;"></i> Hands-on
+                        Practical Coding & Numerical Practice</li>
+                </ul>
+
+                <a href="index.html#contact" class="btn btn-primary"
+                    style="display: block; text-align: center; width: 100%; border-radius: 8px; font-size: 1.05rem; padding: 12px; background: #d97706;">Enroll
+                    For Class 11th / 12th</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Bottom Running Text Ticker -->
+    <div
+        style="background: #0f172a; color: #f8fafc; overflow: hidden; white-space: nowrap; padding: 12px 0; font-weight: 600; font-size: 0.95rem; border-top: 3px solid #2563eb;">
+        <div style="display: inline-block; padding-left: 100%; animation: marquee 20s linear infinite;">
+            🔥 Special Batches for ICSE 10th and 12th Students for Computer ( Java ) & for CBSE 12th Students for Python
+            — Limited Seats Available! Enroll Today! 🔥
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 AViVA CLASSES. All Rights Reserved.</p>
+    </footer>
+    <!-- Contact Us Modal Popup -->
+    <div id="contactModal" class="modal-overlay" onclick="closeContactModal(event)">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeContactModal(event)">&times;</button>
+            <h3 style="font-size: 1.5rem; color: #0f172a; margin-bottom: 8px;">Contact Us</h3>
+            <p style="color: #64748b; margin-bottom: 25px; font-size: 0.95rem; font-weight: bolder;">Get in touch with
+                us directly via Call
+                or WhatsApp</p>
+
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <!-- Call Button -->
+                <a href="tel:+919415801326" class="btn-modal-action call-btn">
+                    <i class="fas fa-phone-alt"></i> Call Us: +91 94158 01326
+                </a>
+
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/919415801326?text=Hello!%20I%20want%20to%20know%20more%20about%20coaching%20classes."
+                    target="_blank" rel="noopener noreferrer" class="btn-modal-action wa-btn">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
