@@ -18,7 +18,8 @@ document.getElementById('inquiryForm').addEventListener('submit', async function
     responseElement.style.color = 'blue';
 
     try {
-        const res = await fetch('/api/inquiry', {
+        // Render Backend Live URL Connected
+        const res = await fetch('https://aviva-backend.onrender.com/api/inquiry', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, phone, studentClass, message })
